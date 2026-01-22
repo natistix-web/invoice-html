@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Commercial Invoice - IDRINK PRODUCTS</title>
+    <style>
+        @page { size: A4; margin: 0; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; margin: 0; padding: 30px; line-height: 1.3; font-size: 13px; }
+        .invoice-header { display: flex; justify-content: space-between; border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 20px; }
+        .logo-container img { max-width: 150px; height: auto; }
+        .company-info { text-align: right; font-size: 11px; }
+        .invoice-title { font-size: 24px; font-weight: bold; text-transform: uppercase; margin-top: 5px; color: #1a1a1a; }
+        
+        .address-section { display: flex; justify-content: space-between; margin-bottom: 20px; }
+        .address-box { width: 48%; }
+        .address-box h3 { font-size: 10px; text-transform: uppercase; color: #777; border-bottom: 1px solid #eee; padding-bottom: 3px; margin-bottom: 8px; }
+        .address-box p { font-size: 13px; margin: 1px 0; font-weight: 500; }
+
+        .meta-table { width: 100%; border-collapse: collapse; background: #f9f9f9; }
+        .meta-table td { border: 1px solid #ddd; padding: 8px; font-size: 12px; }
+        .meta-label { font-weight: bold; background: #eee; width: 40%; }
+
+        .items-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .items-table th { background: #1a1a1a; color: #fff; text-align: left; padding: 10px; font-size: 11px; text-transform: uppercase; }
+        .items-table td { padding: 10px; border-bottom: 1px solid #eee; font-size: 13px; }
+        
+        .summary-container { display: flex; justify-content: flex-end; margin-top: 10px; }
+        .summary-box { width: 35%; }
+        .summary-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #eee; }
+        .summary-row.total { border-bottom: none; font-size: 18px; font-weight: bold; color: #000; padding-top: 10px; }
+        .discount-text { color: #d00000; font-weight: bold; }
+
+        .payment-info { margin-top: 20px; border: 1px dashed #ccc; padding: 10px; font-size: 12px; display: inline-block; }
+        .signature-section { margin-top: 30px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .signature-box { width: 180px; border-top: 1px solid #333; text-align: center; padding-top: 5px; font-size: 11px; }
+        
+        .barcode-section { margin-top: 30px; text-align: center; }
+        .barcode { font-family: 'Libre Barcode 128', cursive; font-size: 35px; letter-spacing: 3px; margin-bottom: 0; }
+        .barcode-num { font-family: monospace; font-size: 10px; letter-spacing: 1px; margin-top: -5px; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="invoice-header">
+    <div class="logo-container">
+        <img src="logo.jpeg" alt="Company Logo">
+        <div class="invoice-title">Commercial Invoice</div>
+    </div>
+    <div class="company-info">
+        <strong>IDRINK PRODUCTS LLC</strong><br>
+        1422 Woodland Drive, Saline, MI 48176 USA<br>
+        Phone: +1 734-531-6324 | support@idrinkproducts.com
+    </div>
+</div>
+
+<div class="address-section">
+    <div class="address-box">
+        <h3>Customer / Shipping Details</h3>
+        <p><strong>Ido Cohen</strong></p>
+        <p>Nahal Ramon 12</p>
+        <p>Hadera, Haifa, 3825142, Israel</p>
+        <p>Tel: +972 532 961 812</p>
+        <p>Email: idocohenips@gmail.com</p>
+    </div>
+    <div class="address-box">
+        <table class="meta-table" style="margin-left: auto; width: 80%;">
+            <tr><td class="meta-label">Invoice #</td><td>INV-ID-20251104</td></tr>
+            <tr><td class="meta-label">Date</td><td>Nov 22, 2025</td></tr>
+            <tr><td class="meta-label">Account ID</td><td>AC-9921-IC</td></tr>
+        </table>
+    </div>
+</div>
+
+<table class="items-table">
+    <thead>
+        <tr>
+            <th style="width: 50%;">Description</th>
+            <th>UPC / SKU</th>
+            <th>Qty</th>
+            <th>Unit</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <strong>OmniFizz FOUR CYLINDER BUNDLE</strong><br>
+                <span style="font-size: 11px; color: #555;">Sparkling Water Maker - Black Bundle Edition</span>
+            </td>
+            <td>850016147141</td>
+            <td>14</td>
+            <td>$133.50</td>
+            <td>$1,869.00</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="summary-container">
+    <div class="summary-box">
+        <div class="summary-row"><span>Subtotal:</span><span>$1,869.00</span></div>
+        <div class="summary-row"><span class="discount-text">Discount (15%):</span><span class="discount-text">-$280.35</span></div>
+        <div class="summary-row"><span>Shipping (UPS):</span><span>$150.00</span></div>
+        <div class="summary-row total"><span>Total USD:</span><span>$1,738.65</span></div>
+    </div>
+</div>
+
+<div class="payment-info">
+    <strong>Payment:</strong> MASTERCARD (****-9549) | <strong>Auth Code:</strong> 09221X
+</div>
+
+<div class="signature-section">
+    <div style="font-size: 10px; color: #666; width: 60%;">
+        Certified that the particulars given above are true and correct and the amount indicated represents the price actually paid.
+    </div>
+    <div class="signature-box">Authorized Signatory</div>
+</div>
+
+<div class="barcode-section">
+    <div class="barcode">491028374652</div>
+    <div class="barcode-num">491028374652</div>
+</div>
+
+</body>
+</html>
